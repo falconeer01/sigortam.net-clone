@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SigortamNavbar.css';
 
 function SigortamNavbar() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className='nav'>
         <div className='navbar-brand'>
@@ -14,10 +16,119 @@ function SigortamNavbar() {
 
         <div className='nav-link-list h-100 d-flex justify-content-center align-items-center'>
             <ul className='nav-links d-flex p-0'>
-                <li>
+                <li className='products'
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    {/* Products modal */}
+                    <div className='products-modal'>
+                        <h4 className='modal-title'>Sigortam.net'i keşfedin</h4>
+                        <div className='products-container'>
+                            <div className='product'>
+                                <div className='product-title'>
+                                    <p className='product-name'>Aracım</p>
+                                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/mega-menu/car.svg' alt='Aracım'/>
+                                </div>
+                                <ul className='product-properties'>
+                                    <li className='product-property'>Kasko
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li className='product-property'>Trafik Sigortası
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li className='product-property'>İMM
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className='product'>
+                                <div className='product-title'>
+                                    <p className='product-name'>Sağlığım</p>
+                                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/mega-menu/health.svg' alt='Sağlık'/>
+                                </div>
+                                <ul className='product-properties'>
+                                    <li className='product-property'>Tamamlayıcı Sağlık Sigortası
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li className='product-property'>Özel Sağlık Sigortası
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li className='product-property'>Seyahat Sağlık
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className='product'>
+                                <div className='product-title'>
+                                    <p className='product-name'>Evim</p>
+                                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/mega-menu/home.svg' alt='Evim'/>
+                                </div>
+                                <ul className='product-properties'>
+                                    <li className='product-property'>DASK
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li className='product-property'>Konut Sigortası
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li className='product-property'>Evim Güvende
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className='product'>
+                                <div className='product-title'>
+                                    <p className='product-name'>Diğer</p>
+                                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/mega-menu/other.svg' alt='Diğer'/>
+                                </div>
+                                <ul className='product-properties'>
+                                    <li className='product-property'>Cep Telefonu
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li className='product-property'>Evcil Hayvan
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li className='product-property'>
+                                        Ferdi Kaza <span className='new-badge'>Yeni</span>
+                                        <span className='link-icon'>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Products modal end */}
+
                     <a href='#' className='nav-link'>
                         Ürünlerimiz <span className='dropdown-logo'>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            // className={isHovered ? 'rotated-svg' : ''}
+                            ></path></svg>
                         </span>
                     </a>
                 </li>
@@ -26,14 +137,52 @@ function SigortamNavbar() {
                         Kampanyalar
                     </a>
                 </li>
-                <li>
+                <li className='policy'>
+                    {/* Policy modal start */}
+                    <div className='policy-modal'>
+                        <ul className='policy-properties'>
+                            <li className='policy-property'>Poliçe iptal Başvuru
+                                <span className='link-icon'>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li className='policy-property'>Poliçe iptal Takip
+                                <span className='link-icon'>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    {/* Policy modal end */}
+
                     <a href='#' className='nav-link'>
                         Poliçe İşlemleri <span className='dropdown-logo'>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                         </span>
                     </a>
                 </li>
-                <li>
+                <li className='info'>
+                    {/* Info modal start */}
+                    <div className='info-modal'>
+                        <ul className='info-properties'>
+                            <li className='info-property'>Sigorta Blog
+                                <span className='link-icon'>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li className='info-property'>Hakkında
+                                <span className='link-icon'>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-nav-link__icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    {/* Info modal end */}
+
                     <a href='#' className='nav-link'>
                         Bilgi Merkezi <span className='dropdown-logo'>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>

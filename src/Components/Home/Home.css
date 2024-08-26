@@ -135,3 +135,53 @@ body{
     cursor: pointer;
     font-weight: 600;
 }
+
+.why-us-section{
+    padding-top: 72px;
+    padding-bottom: 13px;
+    background-color: #fff;
+}
+
+.why-us{
+    padding: 0 15px;
+}
+
+.why-us-items{
+    max-width: 1170px;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.why-us-title{
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 88px;
+    margin: 0;
+}
+
+.why-us-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 330px;
+    flex-wrap: wrap;
+    grid-row-gap: 8px;
+    text-align: center;
+}
+
+.why-us-item-name{
+    font-size: 20px;
+    color: var(--icon-color);
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    font-weight: 600;
+}
+
+.why-us-item-desc{
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--main-font-color);
+    text-align: center;
+}
