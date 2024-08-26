@@ -1,3 +1,18 @@
+:root{
+  --main-color: #0089ec;
+  --main-font-color: #515353;
+  --secondary-font-color: #717171;
+  --icon-color: #1d1e1e;
+  --main-bg-color: #F5F7F9;
+}
+
+body{
+  background-color: var(--main-bg-color);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }

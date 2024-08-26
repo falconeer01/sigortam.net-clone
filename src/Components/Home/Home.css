@@ -1,0 +1,137 @@
+:root{
+    --main-color: #0089ec;
+    --main-font-color: #515353;
+    --secondary-font-color: #717171;
+    --icon-color: #1d1e1e;
+    --main-bg-color: #F5F7F9;
+    --badge-color: #81ce80;
+}
+  
+body{
+    background-color: var(--main-bg-color);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.products-section{
+    margin: 100px 0;
+}
+
+.products{
+    padding: 0 15px;
+}
+
+.products-title{
+    width: 1290px;
+    height: 569px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-heading{
+    font-size: 54px;
+    line-height: 72px;
+    color: var(--icon-color);
+    font-weight: 700;
+    letter-spacing: -0.32px;
+}
+
+.products-message{
+    margin-top: 24px;
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.32px;
+    color: var(--main-font-color);
+}
+
+.products-cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 890px;
+}
+
+.first-product-row, .second-product-row {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+}
+
+.first-product-row{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.second-product-row{
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.product-card, .product-card-sm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 0 10px;
+    height: 162px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.product-card:hover, .product-card-sm:hover{
+    color: var(--main-color);
+    box-shadow: 0 8px 16px rgba(34, 34, 34, .08);
+}
+
+.product-card{
+    position: relative;
+    max-width: 276px;
+}
+
+.product-card-sm{
+    max-width: 158px;
+}
+
+.discount{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    color: #fff;
+    background-color: var(--badge-color);
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.32px;
+}
+
+.product-name{
+    font-size: 15px;
+    line-height: 27px;
+    display: inline-block;
+    margin-top: 2px;
+    font-weight: 600;
+}
+
+.btn-all-products{
+    margin: 30px 0 15px;
+    display: inline-block;
+    text-align: center;
+}
+
+.all-products{
+    color: var(--main-color);
+    font-size: 15px;
+    line-height: 27px;
+    letter-spacing: -0.32px;
+    cursor: pointer;
+    font-weight: 600;
+}

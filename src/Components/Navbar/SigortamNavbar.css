@@ -3,6 +3,7 @@
     --main-font-color: #515353;
     --secondary-font-color: #717171;
     --icon-color: #1d1e1e;
+    --main-bg-color: #F5F7F9;
 }
 
 body{
@@ -17,6 +18,7 @@ a{
 }
 
 .nav{
+    background-color: var(--main-bg-color);
     padding: 0 15px;
     margin: auto;
     display: grid;
@@ -60,6 +62,8 @@ a{
     display: inline-block;
     width: 18px;
     height: 18px;
+    position: relative;
+    left: -4px;
 }
 
 .nav-link::after{
@@ -109,6 +113,7 @@ a{
     width: 20px;
     height: 20px;
     margin-right: 6px;
+    align-self: center;
 }
 
 .login{
