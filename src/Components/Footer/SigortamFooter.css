@@ -1,0 +1,208 @@
+:root{
+    --main-color: #0089ec;
+    --main-font-color: #515353;
+    --secondary-font-color: #717171;
+    --icon-color: #1d1e1e;
+    --main-bg-color: #F5F7F9;
+    --badge-color: #ff7300;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+footer{
+    width: 100%;
+    padding-top: 44px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.footer-title-logo{
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin: 8px 0 0 0;
+}
+
+.copyright{
+    color: var(--secondary-font-color);
+    font-size: 11px;
+}
+
+.awards{
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.footer-main{
+    position: relative;
+    margin-top: 36px;
+    padding: 0 0 72px 0;
+}
+
+.footer-main-row{
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    padding: 0 15px;
+}
+
+.footer-nav-title strong{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.footer-nav-list li{
+    display: table;
+    margin-bottom: 8px;
+    color: var(--secondary-font-color);
+    font-size: 15px;
+    line-height: 22px;
+    cursor: pointer;
+    max-width: 250px;
+}
+
+.footer-nav-list li a:hover{
+    text-decoration: underline;
+}
+
+.footer-action-call{
+    margin-bottom: 43px;
+    font-size: 15px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+.footer-phone-title{
+    color: var(--secondary-font-color);
+    font-size: 15px;
+    margin-bottom: 1px;
+    margin-right: auto;
+}
+
+.footer-phone-number{
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: right;
+    line-height: 27px;
+    margin-right: auto;
+    color: var(--icon-color);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.phone-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    align-self: center;
+}
+
+.follow-us{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.social-icon{
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    margin-right: 28px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.certificates{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.certificate{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.certificate img{
+    object-fit: contain;
+}
+
+.trust-img{
+    width: 99px;
+    height: 36px;
+}
+
+.qr-code{
+    width: 88px;
+    height: 88px;
+}
+
+.ssl-img{
+    width: 35px;
+    height: 44px;
+}
+
+.bottom-footer{
+    width: 100%;
+    height: 102px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #f4f4f4;
+}
+
+.bottom-inner-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-footer-banner{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 36px;
+    color: var(--secondary-font-color);
+    font-size: 15px;
+}
+
+.iLab-logo{
+    margin: 0 12px;
+}
+
+.bottom-footer-link, .link-divider{
+    color: var(--secondary-font-color);
+    font-size: 15px;
+}

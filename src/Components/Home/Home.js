@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import { Col, Container, Row } from 'reactstrap';
 import SigortamNavbar from '../Navbar/SigortamNavbar';
+import Footer from '../Footer/SigortamFooter';
 
 function Home() {
   return (
@@ -113,6 +114,8 @@ function Home() {
           </Container>
         </section>
         {/* Why-us section end */}
+
+        <Footer/>
     </Container>
   )
 }
