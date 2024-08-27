@@ -1,12 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SigortamNavbar.css';
 
 function SigortamNavbar() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+        const nav = document.querySelector('.nav');
+
+        console.log(nav.clientHeight);
+
+        if (window.scrollY > nav.clientHeight){
+            setIsSticky(true);
+        }
+        else {
+            setIsSticky(false);
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className='nav'>
+    <div className={isSticky ? 'nav sticky' : 'nav'}>
         <div className='navbar-brand'>
             <a href='#'>
                 <img src='https://cdnsnet.mncdn.com/facelift/assets/img/core/logo/app-logo-goat.svg' width={26} height={27} className='goat-icon'></img>
