@@ -185,3 +185,245 @@ body{
     color: var(--main-font-color);
     text-align: center;
 }
+
+.awards-section{
+    background-color: #fff;
+}
+
+.awards-row{
+    margin: 0 50px;
+    padding: 72px 0;
+}
+
+.awards-detail h2{
+    font-size: 32px;
+    line-height: 39px;
+    color: var(--icon-color);
+}
+
+.awards-detail p{
+    white-space: nowrap;
+    margin: 16px 0;
+    color: var(--main-font-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    max-width: 100%;
+}
+
+.awards-detail span{
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 27px;
+    letter-spacing: -0.32px;
+}
+
+.awards-img{
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+    justify-content: flex-end;
+    height: 238px;
+}
+
+.offers-section{
+    margin: 72px 0;
+}
+
+.offers h2{
+    margin: 0 27px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.companies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1020px;
+    margin: 52px auto 40px;
+}
+
+.company{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 115px;
+    margin: 10px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 12px;
+    filter: grayscale(100%);
+}
+
+.company:hover{
+    cursor: pointer;
+    filter: grayscale(0);
+    transition: all .3s ease;
+}
+
+.company img{
+    object-fit: contain;
+}
+
+.other-companies{
+    display: flex;
+    justify-content: center;
+    color: var(--main-color);
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.faq-section{
+    margin: 72px auto;
+    max-width: 960px;
+    padding: 72px 0;
+}
+
+.faq-title{
+    margin-top: 70px;
+    margin-bottom: 46px;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: -0.32px;
+}
+
+.faq-accordion{
+    margin-top: 24px;
+}
+
+.accordion-item{
+    margin-bottom: 16px;
+    motion: 0.3s cubic-bezier(0.45,0,0.55,1);
+    position: relative;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 2px 6px rgba(34,34,34,0.02);
+    border-radius: 12px;
+}
+
+.accordion-item:first-of-type, .accordion-item:last-of-type{
+    border-radius: 12px;
+}
+
+.accordion-item:first-of-type>.accordion-header .accordion-button,
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed
+{
+    border-radius: 12px;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed)
+{
+    padding: 26px 36px;
+    color: var(--icon-color);
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+.accordion-button:focus:not(:focus-visible),
+.accordion-button:focus-visible
+{
+    outline: none;
+}
+
+.accordion-body{
+    margin: 0 36px;
+    padding: 16px 0 36px;
+    border-top: 1px solid #dee0e2;
+    color: var(--main-font-color);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.trust-section{
+    margin-bottom: 100px;
+}
+
+.trust-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 24px;
+}
+
+.trust-banner h3{
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: 700;
+    display: flex;
+}
+
+.trust-banner p{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.trust-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 52px 7px;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.trust-card{
+    width: 162px;
+    height: 162px;
+    background-color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    row-gap: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.trust-card:hover{
+    color: var(--main-color);
+    box-shadow: 0 8px 16px rgba(34, 34, 34, .08);
+    transition: all .3s ease-in;
+}
+
+.trust-card-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.trust-card-img{
+    max-width: 150px;
+    max-height: 110px;
+}
+
+.trust-card-title{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}

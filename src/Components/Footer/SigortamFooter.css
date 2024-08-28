@@ -206,3 +206,7 @@ footer{
     color: var(--secondary-font-color);
     font-size: 15px;
 }
+
+.bottom-footer-link:hover{
+    text-decoration: underline;
+}
