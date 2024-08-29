@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
 import {
-  Col, Container, Row, Accordion, AccordionBody, AccordionHeader, AccordionItem,
+  Col, Container, Row, AccordionBody, AccordionHeader, AccordionItem,
   UncontrolledAccordion
 } from 'reactstrap';
 import SigortamNavbar from '../Navbar/SigortamNavbar';
@@ -20,14 +20,14 @@ function Home(props) {
   }
 
   const [isSeeOthersClicked, setIsSeeOthersClicked] = useState(false);
-  const seeOtherCompaniesBtn = document.querySelector('.other-companies span');
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const handleSeeOthersClick = () => {
     setIsSeeOthersClicked(prevState => !prevState);
-    // seeOtherCompaniesBtn.innerHTML = `
-    //   Daha Az Sigorta Şirketini Gör
-    //   <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="position-absolute"><path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLineCap="round" strokeLineJoin="round"></path></svg>
-    // `
+  }
+
+  const handleCustomerNavLiClick = (index) => {
+    setActiveIndex(index)
   }
 
   return (
@@ -139,6 +139,95 @@ function Home(props) {
         </section>
         {/* Why-us section end */}
 
+        {/* Customer-special section start */}
+        <section className='customer-special-section'>
+          <Container className='customer-special'>
+            <div className='inner-customer-special'>
+              <h2>Sigortam.net'te sana özel neler var?</h2>
+              <div className='customer-special-main'>
+                <ul className='customer-special-nav' role='tablist'>
+                  <li 
+                    onClick={() => handleCustomerNavLiClick(0)}
+                    className={activeIndex === 0 ? 'selected' : ''}>
+                    İndirimler & Kampanyalar
+                  </li>
+                  <li 
+                    onClick={() => handleCustomerNavLiClick(1)}
+                    className={activeIndex === 1 ? 'selected' : ''}>
+                    Reklam Filmleri
+                  </li>
+                  <li 
+                    onClick={() => handleCustomerNavLiClick(2)}
+                    className={activeIndex === 2 ? 'selected' : ''}>
+                    Öne Çıkanlar
+                  </li>
+                </ul>
+
+                <div className='customer-special-panel position-relative'>
+                  <div id="carouselExampleIndicators" className="carousel slide">
+                    <ol className="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    </ol>
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="First slide"/>
+                      </div>
+                      <div className="carousel-item">
+                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Second slide"/>
+                      </div>
+                      <div className="carousel-item">
+                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/nP_Ofyakn80?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Third slide"/>
+                      </div>
+                      <div className="carousel-item">
+                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/_WZSSLfNb7Y?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fourth slide"/>
+                      </div>
+                      <div className="carousel-item">
+                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/NNfLzKUfEeY?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fifth slide"/>
+                      </div>
+                    </div>
+                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <i className="fa-solid fa-chevron-left carousel-btn" style={{ fontSize: '20px' }}></i>
+                    </a>
+                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <i className="fa-solid fa-chevron-right carousel-btn" style={{ fontSize: '20px' }}></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+        {/* Customer-special section end */}
+
+        {/* Comments section start */}
+        <section className='comments-section'>
+          <Container className='comments'>
+            <h2>10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h2>
+              <Row className='comments-row'>
+                <Col lg="4" className='comment-card'>
+                  <span className='comment'>İnternetten alınan bir poliçeden <b>çok daha fazlası.</b> Kaza anında çekicinin gelmesinden tutun sağlık durumunuza kadar <b>her şeyle ilgileniyorlar.</b>
+                  </span>
+                  <span className='commenter'>Kasım Ş.</span>
+                </Col>
+                <Col lg="4" className='comment-card'>
+                  <span className='comment'>Sigortam.net sayesinde evden çıkmadan <b>tek bir telefonla</b> trafik sigortası ve kaskoyu yaptırdım.<b> Hızlı, sorunsuz ve güvenilir.</b>
+                  </span>
+                  <span className='commenter'>Murat İ.</span>
+                </Col>
+                <Col lg="4" className='comment-card'>
+                  <span className='comment'>Piyasadan alabileceğim kasko poliçesini aynı kapsamda <b>taksitle, daha ucuza ve profesyonel hizmetle </b>Sigortam.net üzerinden satın aldım.
+                  </span>
+                  <span className='commenter'>Şaban K.</span>
+                </Col>
+              </Row>
+          </Container>
+        </section>
+        {/* Comments section end */}
+
         {/* Awards section start */}
         <section className='awards-section'>
           <Container className='awards-container'>
@@ -147,15 +236,15 @@ function Home(props) {
                 <h2>Ödüllerimizden bahsetmiş miydik?</h2>
                 <p>
                   Dünyanın en prestijli ödüllerinden biri olan Stevie Awards’ta 
-                  <br class="d-xl-block"/>
+                  <br className="d-xl-block"/>
                   Sigorta Sektörünün En İyi Websitesi Ödülü’nü kazandık.
-                  <br class="d-xl-block"/>
+                  <br className="d-xl-block"/>
                   Sizinle yürüdüğümüz bu yolda nice ödülleri kucaklamak dileğiyle...
                 </p>
                 <span>
                   Detaylı Bilgi
-                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ms-1">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLineCap="round" strokeLineJoin="round"></path>
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ms-1">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                   </svg>
                 </span>
               </Col>
@@ -266,8 +355,8 @@ function Home(props) {
                     d="M6 9L12 15L18 9" 
                     stroke="currentColor" 
                     strokeWidth="2" 
-                    strokeLineCap="round" 
-                    strokeLineJoin="round"
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
                   />
                 </svg>
               </span>

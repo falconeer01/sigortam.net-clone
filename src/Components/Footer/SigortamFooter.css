@@ -69,6 +69,10 @@ footer{
     padding: 0 15px;
 }
 
+.footer-nav{
+    padding-left: 0;
+}
+
 .footer-nav-title strong{
     display: block;
     margin-bottom: 8px;
@@ -89,6 +93,7 @@ footer{
 
 .footer-nav-list li a:hover{
     text-decoration: underline;
+    color: var(--main-font-color);
 }
 
 .footer-action-call{
@@ -209,4 +214,5 @@ footer{
 
 .bottom-footer-link:hover{
     text-decoration: underline;
+    color: var(--secondary-font-color);
 }

@@ -37,7 +37,7 @@ function SigortamNavbar() {
 
         <div className='nav-link-list h-100 d-flex justify-content-center align-items-center'>
             <ul className='nav-links d-flex p-0'>
-                <li className='products'
+                <li className='products p-0'
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >

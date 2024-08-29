@@ -4,7 +4,7 @@
     --secondary-font-color: #717171;
     --icon-color: #1d1e1e;
     --main-bg-color: #F5F7F9;
-    --badge-color: #81ce80;
+    --discount-badge-color: #81ce80;
 }
   
 body{
@@ -104,7 +104,7 @@ body{
     justify-content: center;
     height: 20px;
     color: #fff;
-    background-color: var(--badge-color);
+    background-color: var(--discount-badge-color);
     border-radius: 12px;
     font-weight: 600;
     padding: 4px 8px;
@@ -184,6 +184,194 @@ body{
     line-height: 24px;
     color: var(--main-font-color);
     text-align: center;
+}
+
+.customer-special-section{
+    padding: 72px 0;
+    background-color: #fff;
+}
+
+.inner-customer-special{
+    max-width: 1208px;
+    margin: auto;
+}
+
+.inner-customer-special h2{
+    display: block;
+    margin: 0 auto 52px;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.customer-special-panel{
+    width: 1080px;
+    height: 520px;
+    box-shadow: 0 16px 32px 1px rgba(0, 0, 0, 0.16);
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+  
+.carousel-inner {
+    width: 1080px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.carousel-control-prev,
+.carousel-control-prev:hover,
+.carousel-control-next,
+.carousel-control-next:hover{
+    opacity: 1;
+}
+
+.carousel-control-prev{
+    left: -110px;
+}
+
+.carousel-control-next{
+    right: -110px;
+}
+
+.carousel-btn{
+    color: var(--main-color);
+}
+
+.carousel-item{
+    height: 520px;
+    width: 100%;
+    position: absolute;
+}
+
+.carousel-item iframe{
+    border-radius: 12px;
+}
+  
+.carousel-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.customer-special-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-special-nav{
+    display: flex;
+    align-self: center;
+    max-width: 100%;
+    margin-bottom: 32px;
+    padding-bottom: 52px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.customer-special-nav li{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-right: 8px;
+    padding: 0 16px;
+    font-size: 15px;
+    line-height: 22px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-weight: 500;
+    color: var(--secondary-font-color);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.customer-special-nav li:hover{
+    background-color: #fafafa;
+}
+
+.customer-special-nav .selected{
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.carousel-indicators{
+    position: relative;
+    bottom: -105%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-indicators .active{
+    background-color: #6AACF1;
+}
+
+.carousel-indicators li{
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 6px;
+    background-color: #C8C8C8;
+}
+
+.comments-section{
+    margin: 72px 0;
+    padding: 72px 0;
+}
+
+.comments h2{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+}
+
+.comments-row{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.comments-row div:not(:last-child){
+    margin-right: 20px;
+}
+
+.comment-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 219px;
+    padding: 32px;
+    background-color: #fff;
+    max-width: 377px;
+    border-radius: 12px;
+}
+
+.comment{
+    font-size: 16px;
+    line-height: 27px;
+    text-align: left;
+}
+
+.commenter{
+    line-height: 24px;
+    align-self: flex-end;
 }
 
 .awards-section{

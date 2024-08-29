@@ -100,7 +100,7 @@ function SigortamFooter() {
             </Col>
             <Col lg="3" xl="2" className='footer-socials'>
               <div className='footer-action-call'>
-                <a href='#' className='d-flex flex-column'>
+                <a className='d-flex flex-column'>
                     <span className='footer-phone-title text-start'>Yardımcı olmaya hazırız</span>
                     <span className='footer-phone-number d-flex'>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="phone-icon">
@@ -135,10 +135,10 @@ function SigortamFooter() {
                 </ul>
               </div>
               <div className='certificates'>
-                <a href='#' className='certificate'>
+                <a className='certificate'>
                   <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/brand-signatures/guven-damgasi.svg' width={118} height={43} alt='Güven Damgası' className='trust-img'/>
                 </a>
-                <a href='#' className='certificate'>
+                <a className='certificate'>
                   <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/brand-signatures/etbis.jfif' width={38} height={45} alt='Etbis' className='qr-code'/>
                 </a>
                 <div className='ssl me-0'>
