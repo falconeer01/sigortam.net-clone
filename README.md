@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Sigortam.net Clone - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Proje Açıklaması
 
-## Available Scripts
+Bu proje, **Sigortam.net** web sitesinin frontend kısmının bir klonudur. Kullanıcıların farklı sigorta türlerini karşılaştırabilmesi için tasarlanmıştır. Proje, frontend geliştirme becerilerini geliştirmek amacıyla oluşturulmuş olup, modern web teknolojileri kullanılarak inşa edilmiştir.
 
-In the project directory, you can run:
+## Özellikler
 
-### `npm start`
+- **Ana Sayfa**: Kullanıcıların sigorta türlerine göz atabileceği, promosyonları ve kampanyaları görebileceği bir ana sayfa.
+- **Sigorta Karşılaştırma**: Kullanıcıların farklı sigorta planlarını görüntüleyip karşılaştırabileceği bir sayfa.
+- **Responsive Tasarım**: Hem mobil hem de masaüstü cihazlarda uyumlu bir kullanıcı deneyimi sunar.
+- **Basit Formlar**: Kullanıcıların bilgilerini girip teklifler alabileceği form yapıları.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Kullanılan Teknolojiler
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **HTML5**: Web sayfasının temel yapısı.
+- **CSS3**: Sayfa stilizasyonu ve layout düzenlemeleri.
+- **JavaScript (ES6+)**: Sayfa içi dinamik özellikler ve etkileşimler.
+- **React.js**: Kullanıcı arayüzlerini oluşturmak için kullanılan ana kütüphane.
 
-### `npm test`
+## Kurulum ve Çalıştırma
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Gereksinimler
 
-### `npm run build`
+- Node.js v12+ 
+- Bir web tarayıcısı (Google Chrome, Firefox, vb.)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Kurulum Adımları
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Depoyu Klonlayın:**
+    ```bash
+    git clone https://github.com/kullanici_adi/sigortamnet-clone-frontend.git
+    ```
+2. **Proje dizinine gidin:**
+    ```bash
+    cd sigortamnet-clone-frontend
+    ```
+3. **Bağımlılıkları yükleyin:**
+    ```bash
+    npm install
+    ```
+4. **Uygulamayı başlatın:**
+    ```bash
+    npm start
+    ```
+5. **Tarayıcınızda görüntüleyin:**
+    - Uygulama varsayılan olarak `http://localhost:3000` adresinde çalışacaktır.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Proje Yapısı
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+├── public
+│   ├── index.html  # Ana HTML dosyası
+├── src
+│   ├── assets      # CSS, resimler ve diğer statik dosyalar
+│   ├── components  # Yeniden kullanılabilir React bileşenleri
+│   ├── pages       # Sayfa bileşenleri (Ana Sayfa, Karşılaştırma Sayfası vb.)
+│   ├── App.js      # Ana uygulama bileşeni
+│   └── index.js    # Giriş noktası dosyası
+├── package.json    # Proje bağımlılıkları ve betikler
+└── README.md       # Proje dokümantasyonu
