@@ -217,7 +217,7 @@ a:hover{
 .landing-cover-row{
     width: 80%;
     margin: auto;
-    padding-right: 50px;
+    /* padding-right: 50px; */
 }
 
 .left-landing-cover{
@@ -843,6 +843,10 @@ a:hover{
         margin: 0;
         padding: 0;
     }
+
+    .landing-cover-item-mobile img{
+        padding-right: 15px;
+    }
 }
 
 /* max-width: 992px */
@@ -986,6 +990,14 @@ a:hover{
 @media (min-width: 1200px){
     .why-us-item{
         max-width: 330px;
+    }
+}
+
+@media (max-width: 1200px){
+    .landing-cover-row{
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 }
 

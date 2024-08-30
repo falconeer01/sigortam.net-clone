@@ -480,7 +480,7 @@ function Home(props) {
         {/* Awards section end */}
 
         {/* Offer section start */}
-        {/* <section className='offers-section'>
+        <section className='offers-section'>
           <Container className='offers'>
             <h2>20'den fazla sigorta şirketinden teklif al</h2>
             <div className='companies'>
@@ -583,11 +583,11 @@ function Home(props) {
               </span>
             </div>
           </Container>
-        </section> */}
+        </section>
         {/* Offer section end */}
 
         {/* Question section start */}
-        {/* <section className='faq-section'>
+        <section className='faq-section'>
           <Container className='faq'>
             <h2 className='faq-title'>Sigortam.net Hakkında En Merak Edilen 5 Soru</h2>
             <div className='faq-accordion'>
@@ -625,11 +625,11 @@ function Home(props) {
               </UncontrolledAccordion>
             </div>
           </Container>
-        </section> */}
+        </section>
         {/* Question section end */}
 
         {/* Trust section start */}
-        {/* <section className='trust-section'>
+        <section className='trust-section'>
           <Container className='trust'>
             <div className='trust-banner'>
               <h3>Sigortada Güvenin Adresi</h3>
@@ -746,10 +746,10 @@ function Home(props) {
               </div>
             </div>
           </Container>
-        </section> */}
+        </section>
         {/* Trust section end */}
 
-        {/* <Footer/> */}
+        <Footer/>
     </Container>
   )
 }
