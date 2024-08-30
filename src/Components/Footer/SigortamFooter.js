@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SigortamFooter.css';
-import { Col, Container, Row } from 'reactstrap';
+import { Container } from 'reactstrap';
 
 function SigortamFooter() {
   const [year, setYear] = useState(0);
@@ -154,19 +154,19 @@ function SigortamFooter() {
             <strong className='footer-follow-us'>Bizi Takip Edin</strong>
             <ul className='footer-icon-list'>
               <li className='social-icon'>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/facebook.svg'/>
+                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/facebook.svg' alt='social-icon'/>
               </li>
               <li className='social-icon'>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/x-logo.svg'/>
+                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/x-logo.svg' alt='social-icon'/>
               </li>
               <li className='social-icon'>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/instagram.svg'/>
+                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/instagram.svg' alt='social-icon'/>
               </li>
               <li className='social-icon'>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/linkedin.svg'/>
+                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/linkedin.svg' alt='social-icon'/>
               </li>
               <li className='social-icon'>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/youtube-filled.svg'/>
+                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/icons/svg/youtube-filled.svg' alt='social-icon'/>
               </li>
             </ul>
             <div className='certificates'>

@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SigortamNavbar.css';
-import {
-    UncontrolledAccordion, AccordionItem, AccordionHeader, AccordionBody
-} from 'reactstrap';
 
 function SigortamNavbar() {
   const loginBtn = useRef(null);
@@ -44,10 +41,6 @@ function SigortamNavbar() {
 
   return (
     <div className={isSticky ? 'nav sticky' : 'nav'}>
-        {/* <div className='collapse-nav position-relative'>
-            <button className='collapse-nav-login-btn'>Giriş Yap / Üye Ol</button>
-        </div> */}
-
         <div className='navbar-brand'>
             <a href='#'>
                 <img src='https://cdnsnet.mncdn.com/facelift/assets/img/core/logo/app-logo-goat.svg' width={26} height={27} className='goat-icon'></img>
