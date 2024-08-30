@@ -749,7 +749,7 @@ function Home(props) {
         </section>
         {/* Trust section end */}
 
-        <Footer/>
+        {/* <Footer/> */}
     </Container>
   )
 }

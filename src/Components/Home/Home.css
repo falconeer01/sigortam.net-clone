@@ -223,7 +223,7 @@ a:hover{
 .left-landing-cover{
     flex-direction: column;
     justify-content: center;
-    padding-right: 15px;
+    /* padding-right: 15px; */
 }
 
 .landing-cover-item{
@@ -845,7 +845,7 @@ a:hover{
     }
 
     .landing-cover-item-mobile img{
-        padding-right: 15px;
+        /* padding-right: 15px; */
     }
 }
 
