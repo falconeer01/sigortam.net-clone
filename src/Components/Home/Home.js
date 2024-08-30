@@ -9,22 +9,14 @@ import SigortamNavbar from '../Navbar/SigortamNavbar';
 import Footer from '../Footer/SigortamFooter';
 
 function Home(props) {
-  const [open, setOpen] = useState('1');
-  const toggle = (id) => {
-    if (open === id){
-      setOpen();
-    }
-    else {
-      setOpen(id);
-    }
-  }
-
   const sectionRef = useRef(null);
   
   const [isInView, setIsInView] = useState(false);
   const [scale, setScale] = useState(0.1);
 
   useEffect(() => {
+    const currentSectionRef = sectionRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsInView(entry.isIntersecting);
@@ -33,7 +25,7 @@ function Home(props) {
     );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+      observer.observe(currentSectionRef);
     }
 
     const handleScroll = () => {
@@ -47,13 +39,13 @@ function Home(props) {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
       }
 
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isInView, scale, sectionRef]);
+  }, [isInView]);
 
   const [isSeeOthersClicked, setIsSeeOthersClicked] = useState(false);
   const [activeIndex, setActiveIndex] = useState(1);
@@ -136,7 +128,7 @@ function Home(props) {
               </div>
 
               <Row className='btn-all-products'>
-                <a href='#' className='all-products'>Tüm Ürünleri Gör</a>
+                <span className='all-products'>Tüm Ürünleri Gör</span>
               </Row>
             </div>
             
@@ -269,19 +261,19 @@ function Home(props) {
                     </ol>
                     <div className="carousel-inner">
                       <div className="carousel-item active">
-                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="First slide"/>
+                        <iframe title='video-1' className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="First slide"/>
                       </div>
                       <div className="carousel-item">
-                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Second slide"/>
+                        <iframe title='video-2' className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Second slide"/>
                       </div>
                       <div className="carousel-item">
-                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/nP_Ofyakn80?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Third slide"/>
+                        <iframe title='video-3' className="d-block w-100" src="https://www.youtube.com/embed/nP_Ofyakn80?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Third slide"/>
                       </div>
                       <div className="carousel-item">
-                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/_WZSSLfNb7Y?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fourth slide"/>
+                        <iframe title='video-4' className="d-block w-100" src="https://www.youtube.com/embed/_WZSSLfNb7Y?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fourth slide"/>
                       </div>
                       <div className="carousel-item">
-                        <iframe className="d-block w-100" src="https://www.youtube.com/embed/NNfLzKUfEeY?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fifth slide"/>
+                        <iframe title='video-5' className="d-block w-100" src="https://www.youtube.com/embed/NNfLzKUfEeY?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fifth slide"/>
                       </div>
                     </div>
                     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
