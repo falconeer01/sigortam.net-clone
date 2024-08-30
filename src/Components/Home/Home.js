@@ -258,61 +258,78 @@ function Home(props) {
         {/* Why-us section end */}
 
         {/* Landing cover section start */}
-        {/* <section ref={sectionRef} className='landing-cover-section'>
-          <Container className='landing-cover position-relative d-flex align-items-center '>
-            <Row className='landing-cover-row'>
-              <Col sm='12' lg='5' className='left-landing-cover'>
-                <div className='landing-cover-item'>
-                  <div className='landing-cover-item-title'>
-                    Hangi ürün bana en uygun diye düşünme, biz senin için en net teklifleri sıraladık bile!
-                  </div>
-                  <div className='landing-cover-item-detail'>
-                    Tüm teminatları tek tek inceledik, ihtiyaçlarına en uygun olan teminatları belirledik. Sana özel kapsamlı ve fiyatı uygun ürün önerileri hazırladık.
-                  </div>
-                  <div className='landing-cover-item-btn'>
-                    Hemen Teklif Al
-                    <svg width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ms-1">
-                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      </path>
-                    </svg>
-                  </div>
-                </div>
-                <div className='landing-cover-item'>
-                  <div className='landing-cover-item-title'>
-                    Sadece 2 dakikada tüm teklifleri kolayca karşılaştır.
-                  </div>
-                  <div className='landing-cover-item-detail'>
-                    20+ sigorta şirketinden teklifleri tek platformda karşılaştır, internete özel indirimlerle uygun fiyata sigortan anında başlasın.
-                  </div>
-                  <div className='landing-cover-item-btn'>
-                    Hemen Teklif Al
-                    <svg width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
-                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      </path>
-                    </svg>
-                  </div>
-                </div>
-              </Col>
+        <section ref={sectionRef} className='landing-cover-section'>
+          <div className='landing-cover position-relative d-flex align-items-center'>
+            <Container>
+              <Row className='landing-cover-row'>
+                <div className='left-landing-cover col-12 col-lg-5 d-flex'>
+                  <div className='landing-cover-item'>
+                    <div className='landing-cover-item-mobile d-block d-lg-none w-100 text-center'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature1-mobile.png' alt='en iyi sigorta teklifi mobil' width={345} height={388}/>
+                    </div>
 
-              <Col sm='12' lg='7' className='right-landing-cover d-none d-lg-block text-align-center'>
-                <div className='right-landing-cover-container'>
-                  <div className='right-landing-cover-first-img'>
-                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature1.svg' alt='en iyi sigorta teklifi' style={{ transform: `scale3d(${firstImageScale}, ${firstImageScale}, 1)` }}/>
-                  </div>
-                  <div className='right-landing-cover-second-img'>
-                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature2.svg' alt='en iyi sigorta teklifi' style={{ transform: `scale3d(${secondImageScale}, ${secondImageScale}, 1)` }}/>
-                  </div>
-                  <div className='mock-up'>
-                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/phone-mockup.jpg' alt='en iyi sigorta teklifi'  width={260} height={528}/>
-                    <span className='d-none d-lg-block'>
-                      Görseldeki fiyatlar temsilidir. Aracına özel fiyatları tekliflerde görebilirsin.
+                    <span className='mobile-desc d-block d-lg-none'>
+                      Görseldeki fiyatlar temsilidir. Aracına özel fiyatları tekliflerde görebilirsin. 
                     </span>
+
+                    <div className='landing-cover-item-title'>
+                      Hangi ürün bana en uygun diye düşünme, biz senin için en net teklifleri sıraladık bile!
+                    </div>
+                    <div className='landing-cover-item-detail'>
+                      Tüm teminatları tek tek inceledik, ihtiyaçlarına en uygun olan teminatları belirledik. Sana özel kapsamlı ve fiyatı uygun ürün önerileri hazırladık.
+                    </div>
+                    <div className='landing-cover-item-btn'>
+                      Hemen Teklif Al
+                      <svg width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ms-1">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className='landing-cover-item'>
+                      <div className='landing-cover-item-mobile d-block d-lg-none w-100 text-center'>
+                        <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature1-mobile.png' alt='en iyi sigorta teklifi mobil' width={345} height={388}/>
+                      </div>
+
+                      <span className='mobile-desc d-block d-lg-none'>
+                        Görseldeki fiyatlar temsilidir. Aracına özel fiyatları tekliflerde görebilirsin. 
+                      </span>
+                    <div className='landing-cover-item-title'>
+                      Sadece 2 dakikada tüm teklifleri kolayca karşılaştır.
+                    </div>
+                    <div className='landing-cover-item-detail'>
+                      20+ sigorta şirketinden teklifleri tek platformda karşılaştır, internete özel indirimlerle uygun fiyata sigortan anında başlasın.
+                    </div>
+                    <div className='landing-cover-item-btn'>
+                      Hemen Teklif Al
+                      <svg width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        </path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </Col>
-            </Row>
-          </Container>
-        </section> */}
+
+                <div className='right-landing-cover col-12 col-lg-7 d-none d-lg-block text-right'>
+                  <div className='right-landing-cover-container'>
+                    <div className='right-landing-cover-first-img'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature1.svg' alt='en iyi sigorta teklifi' style={{ transform: `scale3d(${firstImageScale}, ${firstImageScale}, 1)` }}/>
+                    </div>
+                    <div className='right-landing-cover-second-img'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature2.svg' alt='en iyi sigorta teklifi' style={{ transform: `scale3d(${secondImageScale}, ${secondImageScale}, 1)` }}/>
+                    </div>
+                    <div className='mock-up'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/phone-mockup.jpg' alt='en iyi sigorta teklifi'  width={260} height={528}/>
+                      <span className='d-none d-lg-block'>
+                        Görseldeki fiyatlar temsilidir. Aracına özel fiyatları tekliflerde görebilirsin.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Row>
+            </Container>
+          </div>
+        </section>
         {/* Landing cover section end */}
 
         {/* Customer-special section start */}
