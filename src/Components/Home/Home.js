@@ -445,33 +445,38 @@ function Home(props) {
         {/* Comments section end */}
 
         {/* Awards section start */}
-        {/* <section className='awards-section'>
+        <section className='awards-section'>
           <Container className='awards-container'>
-            <Row className='awards-row'>
-              <Col className='awards-detail text-left align-self-center' sm='12' md='6' style={{ cursor: 'pointer', textAlign: 'left' }}>
-                <h2>Ödüllerimizden bahsetmiş miydik?</h2>
-                <p>
-                  Dünyanın en prestijli ödüllerinden biri olan Stevie Awards’ta 
-                  <br className="d-xl-block"/>
-                  Sigorta Sektörünün En İyi Websitesi Ödülü’nü kazandık.
-                  <br className="d-xl-block"/>
-                  Sizinle yürüdüğümüz bu yolda nice ödülleri kucaklamak dileğiyle...
-                </p>
-                <span>
-                  Detaylı Bilgi
-                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ms-1">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-                  </svg>
-                </span>
-              </Col>
+            <div className='awards-row-cover'>
+              <div className='awards-row row'>
+                <div className='awards-detail text-left align-self-center col-12 col-lg-6' style={{ cursor: 'pointer', textAlign: 'left' }}>
+                  <h2>Ödüllerimizden bahsetmiş miydik?</h2>
+                  <p>
+                    Dünyanın en prestijli ödüllerinden biri olan Stevie Awards’ta 
+                    <br className="d-xl-block"/>
+                    Sigorta Sektörünün En İyi Websitesi Ödülü’nü kazandık.
+                    <br className="d-xl-block"/>
+                    Sizinle yürüdüğümüz bu yolda nice ödülleri kucaklamak dileğiyle...
+                  </p>
+                  <span>
+                    Detaylı Bilgi
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ms-1">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
 
-              <Col className='awards-img' sm='12' md='6'>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/snet-gold-winner-badge.png' alt='Sigortam.net Stevie Winner' height={238} className='award-img'/>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/if-design-award-2024-vertical.png' alt='If Design Award 2024' height={238} className='award-img'/>
-              </Col>
-            </Row>
+                <div className='awards-img col-sm-12 col-md-6 col-lg-6'>
+                  <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/snet-gold-winner-badge.png' alt='Sigortam.net Stevie Winner' height={238} className='award-img'/>
+                  <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/if-design-award-2024-vertical.png' alt='If Design Award 2024' height={238} className='award-img'/>
+                </div>
+              </div>
+              
+
+
+            </div>
           </Container>
-        </section> */}
+        </section>
         {/* Awards section end */}
 
         {/* Offer section start */}

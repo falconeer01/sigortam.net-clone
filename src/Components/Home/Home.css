@@ -551,9 +551,11 @@ a:hover{
     background-color: #fff;
 }
 
-.awards-row{
-    margin: 0 50px;
-    padding: 72px 0;
+.awards-row-cover{
+    margin: 0;
+    padding: 32px 0;
+    color: var(--icon-color);
+    background-color: #fff;
 }
 
 .awards-detail h2{
@@ -563,7 +565,6 @@ a:hover{
 }
 
 .awards-detail p{
-    white-space: nowrap;
     margin: 16px 0;
     color: var(--main-font-color);
     font-weight: 400;
@@ -815,6 +816,33 @@ a:hover{
         margin-top: 72px;
         margin-bottom: 72px;
     }
+
+    .awards-row-cover{
+        padding: 72px 0;
+    }
+}
+
+@media (max-width: 768px){
+    .awards-detail p{
+        margin: 8px;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 5px 0;
+    }
+
+    .awards-detail span{
+        width: 100%;
+    }
+
+    .awards-img img{
+        max-height: 200px;
+    }
+
+    .landing-cover-row{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 /* max-width: 992px */
@@ -892,6 +920,19 @@ a:hover{
         font-size: 15px;
         line-height: 24px;
     }
+
+    .awards-detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .awards-img{
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* min-width: 992px */
@@ -945,5 +986,11 @@ a:hover{
 @media (min-width: 1200px){
     .why-us-item{
         max-width: 330px;
+    }
+}
+
+@media (min-width: 1440px){
+    .awards-row-cover{
+        margin: 0 50px;
     }
 }
