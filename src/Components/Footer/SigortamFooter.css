@@ -310,7 +310,7 @@ footer{
         gap: 8px;
         margin: 0;
     }
-
+    
     .footer-main{
         flex-direction: column-reverse;
         margin-top: 28px;

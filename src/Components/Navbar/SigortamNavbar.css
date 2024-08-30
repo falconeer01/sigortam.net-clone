@@ -312,7 +312,6 @@ a{
 
 @media (max-width: 992px){
     .nav-actions{
-        min-width: 375px;
         margin-left: 0;
     }
 
