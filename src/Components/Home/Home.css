@@ -314,10 +314,15 @@ a:hover{
     font-weight: 600;
 }
 
-.customer-special-panel{
+/* .customer-special-panel{
     width: 1080px;
     height: 520px;
     box-shadow: 0 16px 32px 1px rgba(0, 0, 0, 0.16);
+} */
+
+.carousel-row{
+    display: grid;
+    grid-template-columns: 64px 1fr 64px;
 }
 
 .carousel {
@@ -326,13 +331,33 @@ a:hover{
     position: relative;
 }
   
-.carousel-inner {
-    width: 1080px;
+.carousel-inner-cover {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 16px 32px 1px rgba(0,0,0,0.16);
+    touch-action: pan-y;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    z-index: 1;
+    list-style: none;
+    /* width: 1080px;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow: hidden; */
+}
+
+.carousel-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
 }
 
 .carousel-control-prev,
@@ -342,46 +367,58 @@ a:hover{
     opacity: 1;
 }
 
-.carousel-control-prev{
-    left: -110px;
-}
-
+.carousel-control-prev,
 .carousel-control-next{
-    right: -110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
 }
 
 .carousel-btn{
     color: var(--main-color);
 }
 
-.carousel-item{
-    height: 520px;
+.carousel-item-cover{
     width: 100%;
-    position: absolute;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
 }
 
-.carousel-item iframe{
+.carousel-item,
+.carousel-item .active
+{
+    height: 520px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    overflow: hidden;
     border-radius: 12px;
+
 }
-  
-.carousel-item iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.iframe-cover{
     width: 100%;
     height: 100%;
-    border: 0;
+}
+
+.iframe-cover iframe{
+    width: 100%;
+    height: 100%;
 }
 
 .customer-special-main{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .customer-special-nav{
-    display: flex;
+    display: inline-flex;
+    position: relative;
+    height: 40px;
     align-self: center;
     max-width: 100%;
     margin-bottom: 32px;
@@ -393,18 +430,20 @@ a:hover{
 }
 
 .customer-special-nav li{
-    display: flex;
-    align-items: center;
     height: 40px;
     margin-right: 8px;
     padding: 0 16px;
     font-size: 15px;
     line-height: 22px;
     border: 1px solid rgba(0, 0, 0, 0);
+    user-select: none;
     font-weight: 500;
+    align-items: center;
     color: var(--secondary-font-color);
     border-radius: 12px;
     cursor: pointer;
+    position: relative;
+    display: inline-flex;
 }
 
 .customer-special-nav li:hover{
@@ -418,11 +457,27 @@ a:hover{
     font-weight: 500;
 }
 
-.carousel-indicators{
+.carousel-indicator-cover{
+    margin-top: 32px;
     position: relative;
-    bottom: -105%;
     display: flex;
     justify-content: center;
+}
+
+.carousel-indicator-cover-inner{
+    display: inline-grid;
+    grid-template-columns: auto 1fr auto;
+
+}
+
+.carousel-indicators{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
 .carousel-indicators .active{
@@ -436,6 +491,7 @@ a:hover{
     border-radius: 50%;
     margin: 0 6px;
     background-color: #C8C8C8;
+    cursor: pointer;
 }
 
 .comments-section{
@@ -766,6 +822,38 @@ a:hover{
     .why-us-item-name{
         margin-top: 4px;
     }
+
+    .customer-special-nav{
+        margin-bottom: 0;
+        padding-bottom: 52px;
+    }
+
+    .customer-special-nav li{
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .customer-special-nav li{
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .carousel-row{
+        display: flex;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next{
+        display: none;
+    }
+
+    .carousel-inner-cover{
+        box-shadow: none;
+    }
+
+    .carousel-indicator-cover{
+        margin-top: 20px;
+    }
 }
 
 /* min-width: 992px */
@@ -792,7 +880,7 @@ a:hover{
         top: 0;
         right: 0;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         display: flex;
         height: 100vh;
         min-height: 900px;

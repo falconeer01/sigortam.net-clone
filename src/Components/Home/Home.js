@@ -333,9 +333,9 @@ function Home(props) {
         {/* Landing cover section end */}
 
         {/* Customer-special section start */}
-        {/* <section className='customer-special-section'>
+        <section className='customer-special-section'>
           <Container className='customer-special'>
-            <div className='inner-customer-special'>
+            <div className='inner-customer-special position-relative'>
               <h2>Sigortam.net'te sana özel neler var?</h2>
               <div className='customer-special-main'>
                 <ul className='customer-special-nav' role='tablist'>
@@ -357,43 +357,64 @@ function Home(props) {
                 </ul>
 
                 <div className='customer-special-panel position-relative'>
-                  <div id="carouselExampleIndicators" className="carousel slide">
-                    <ol className="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    </ol>
-                    <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <iframe title='video-1' className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="First slide"/>
+                  <div id="carouselExampleIndicators" className="carousel slide"data-bs-ride="carousel" data-bs-interval="false">
+                    <div className='carousel-row'>
+                      <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <i className="fa-solid fa-chevron-left carousel-btn" style={{ fontSize: '20px' }}></i>
+                      </a>
+                      <div className='carousel-inner-cover'>
+                        <div className="carousel-inner">
+                          <div className='carousel-item-cover'>
+                            <div className="carousel-item active">
+                              <div className='iframe-cover'>
+                                <iframe title='video-1' className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="First slide"/>
+                              </div>
+                              
+                            </div>
+                            <div className="carousel-item">
+                              <div className='iframe-cover'>
+                                <iframe title='video-2' className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Second slide"/>
+                              </div>
+                            </div>
+                            <div className="carousel-item">
+                              <div className='iframe-cover'>
+                                <iframe title='video-3' className="d-block w-100" src="https://www.youtube.com/embed/nP_Ofyakn80?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Third slide"/>
+                              </div>
+                            </div>
+                            <div className="carousel-item">
+                              <div className='iframe-cover'>
+                                <iframe title='video-4' className="d-block w-100" src="https://www.youtube.com/embed/_WZSSLfNb7Y?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fourth slide"/>
+                              </div>
+                            </div>
+                            <div className="carousel-item">
+                              <div className='iframe-cover'>
+                                <iframe title='video-5' className="d-block w-100" src="https://www.youtube.com/embed/NNfLzKUfEeY?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fifth slide"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="carousel-item">
-                        <iframe title='video-2' className="d-block w-100" src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Second slide"/>
-                      </div>
-                      <div className="carousel-item">
-                        <iframe title='video-3' className="d-block w-100" src="https://www.youtube.com/embed/nP_Ofyakn80?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Third slide"/>
-                      </div>
-                      <div className="carousel-item">
-                        <iframe title='video-4' className="d-block w-100" src="https://www.youtube.com/embed/_WZSSLfNb7Y?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fourth slide"/>
-                      </div>
-                      <div className="carousel-item">
-                        <iframe title='video-5' className="d-block w-100" src="https://www.youtube.com/embed/NNfLzKUfEeY?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1" alt="Fifth slide"/>
+                      <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <i className="fa-solid fa-chevron-right carousel-btn" style={{ fontSize: '20px' }}></i>
+                      </a>
+                    </div>
+                    <div className='carousel-indicator-cover'>
+                      <div className='carousel-indicator-cover-inner'>
+                        <ol className="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        </ol>
                       </div>
                     </div>
-                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <i className="fa-solid fa-chevron-left carousel-btn" style={{ fontSize: '20px' }}></i>
-                    </a>
-                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <i className="fa-solid fa-chevron-right carousel-btn" style={{ fontSize: '20px' }}></i>
-                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </Container>
-        </section> */}
+        </section>
         {/* Customer-special section end */}
 
         {/* Comments section start */}
