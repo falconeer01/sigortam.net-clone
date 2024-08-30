@@ -73,7 +73,7 @@ function Home(props) {
 
   return (
     <Container fluid className='m-0 p-0'>
-        {/* <SigortamNavbar/> */}
+        <SigortamNavbar/>
 
         {/* Products section start */}
         <section className='products-section'>
@@ -749,7 +749,7 @@ function Home(props) {
         </section>
         {/* Trust section end */}
 
-        {/* <Footer/> */}
+        <Footer/>
     </Container>
   )
 }

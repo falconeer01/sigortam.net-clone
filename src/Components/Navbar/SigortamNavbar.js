@@ -44,9 +44,9 @@ function SigortamNavbar() {
 
   return (
     <div className={isSticky ? 'nav sticky' : 'nav'}>
-        <div className='collapse-nav position-relative'>
+        {/* <div className='collapse-nav position-relative'>
             <button className='collapse-nav-login-btn'>Giriş Yap / Üye Ol</button>
-        </div>
+        </div> */}
 
         <div className='navbar-brand'>
             <a href='#'>

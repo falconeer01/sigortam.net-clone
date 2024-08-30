@@ -844,8 +844,9 @@ a:hover{
         padding: 0;
     }
 
-    .landing-cover-item-mobile img{
-        /* padding-right: 15px; */
+    .cert-1{
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -928,7 +929,7 @@ a:hover{
     .awards-detail{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         margin-bottom: 50px;
     }
@@ -1004,5 +1005,20 @@ a:hover{
 @media (min-width: 1440px){
     .awards-row-cover{
         margin: 0 50px;
+    }
+}
+
+@media (max-width: 500px){
+    .footer-banner{
+        flex-direction: column !important;
+    }
+
+    .awards{
+        margin-top: 20px !important;
+    }
+
+    .cert-1{
+        display: flex;
+        align-items: center;
     }
 }
