@@ -18,8 +18,8 @@ Bu proje, **Sigortam.net** web sitesinin frontend kısmının bir klonudur. Kull
 - **CSS3**: Sayfa stilizasyonu ve layout düzenlemeleri.
 - **JavaScript (ES6+)**: Sayfa içi dinamik özellikler ve etkileşimler.
 - **React.js**: Kullanıcı arayüzlerini oluşturmak için kullanılan ana framework.
-- **Bootstrap: CSS bileşenlerini kısaltan ve kolaylaştıran kütüphane.
-- **Reactstrap: CSS bileşenlerini kısaltan ve kolaylaştıran React kütüphanesi.
+- **Bootstrap**: CSS bileşenlerini kısaltan ve kolaylaştıran kütüphane.
+- **Reactstrap**: CSS bileşenlerini kısaltan ve kolaylaştıran React kütüphanesi.
 
 ## Kurulum ve Çalıştırma
 
