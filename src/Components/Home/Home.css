@@ -167,7 +167,16 @@ a:hover{
 .why-us-items{
     max-width: 1170px;
     margin: auto;
-    justify-content: space-around;
+}
+
+.why-us-item-list{
+    padding-top: 88px;
+    margin-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 48px;
+    justify-content: space-between;
 }
 
 .why-us-title{
@@ -181,16 +190,13 @@ a:hover{
 .why-us-item{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    max-width: 330px;
     flex-wrap: wrap;
     grid-row-gap: 8px;
     text-align: center;
 }
 
 .why-us-item-name{
-    font-size: 20px;
     color: var(--icon-color);
     line-height: 24px;
     letter-spacing: -0.16px;
@@ -740,11 +746,42 @@ a:hover{
     .product-card-sm{
         width: 20%;
     }
+
+    .why-us-item-name{
+        font-size: 20px;
+        color: var(--icon-color);
+        line-height: 24px;
+        letter-spacing: -0.16px;
+    }
+
+    .why-us-item-desc{
+        font-size: 15px;
+        line-height: 24px;
+    }
 }
 
 @media (max-width: 992px){
     .product-card, .product-card-sm{
         margin: 5px 0;
         padding: 0 5px;
+    }
+
+    .why-us-item-list{
+        padding-top: 88px;
+        flex-direction: column;
+    }
+
+    .why-us-item:not(:last-child){
+        padding-bottom: 45px;
+    }
+
+    .why-us-item-name{
+        margin-top: 4px;
+    }
+}
+
+@media (min-width: 1200px){
+    .why-us-item{
+        max-width: 330px;
     }
 }

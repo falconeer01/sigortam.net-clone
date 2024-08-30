@@ -223,34 +223,38 @@ function Home(props) {
         {/* Products section end */}
 
         {/* Why-us section start */}
-        {/* <section className='why-us-section'>
-          <Container fluid className='why-us'>
-            <Row className='why-us-items md-3'>
+        <section className='why-us-section'>
+          <Container className='why-us'>
+            <div className='why-us-items'>
               <h2 className='why-us-title'>Poliçemi neden Sigortam.net'ten almalıyım?</h2>
-              <Col className='why-us-item'>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/policy-trustworthy.svg' alt='Doğru Ürün' width={90} height={90} className='why-us-item-img'/>
-                <span className='why-us-item-name'>Doğru Ürün</span>
-                <p className='why-us-item-desc'>
-                  Yenilenen yapay zekâmızla, onlarca sigorta teklifi arasından ucuzunu, sana uygununu ve kapsamlısını buluyoruz. Net teminatlar ve net fiyatlarla kararın hep net olsun.
-                </p>
-              </Col>
-              <Col className='why-us-item'>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/policy-price.svg' alt='İyi Fiyat' width={90} height={90} className='why-us-item-img'/>
-                <span className='why-us-item-name'>İyi Fiyat</span>
-                <p className='why-us-item-desc'>
-                  Önceliğimiz her zaman sensin. Çalıştığımız tüm şirketlerde bütçeni düşünerek “en iyi fiyat garantisi” sunuyoruz.
-                </p>
-              </Col>
-              <Col className='why-us-item'>
-                <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/policy-with-you.svg' alt='7/24 Hizmet' width={90} height={90} className='why-us-item-img'/>
-                <span className='why-us-item-name'>7/24 Hizmet</span>
-                <p className='why-us-item-desc'>
-                  24 yıllık tecrübemiz ve uzman sigorta danışmanlarımızla 7/24 her ihtiyacında yanındayız. Üstelik hasar anında saniyeler içinde bize ulaşabilirsin.
-                </p>
-              </Col>
-            </Row>
+                <div className='why-us-item-list'>
+                  <div className='why-us-item'>
+                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/policy-trustworthy.svg' alt='Doğru Ürün' width={90} height={90} className='why-us-item-img'/>
+                    <span className='why-us-item-name'>Doğru Ürün</span>
+                    <p className='why-us-item-desc'>
+                      Yenilenen yapay zekâmızla, onlarca sigorta teklifi arasından ucuzunu, sana uygununu ve kapsamlısını buluyoruz. Net teminatlar ve net fiyatlarla kararın hep net olsun.
+                    </p>
+                  </div>
+
+                  <div className='why-us-item'>
+                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/policy-price.svg' alt='İyi Fiyat' width={90} height={90} className='why-us-item-img'/>
+                    <span className='why-us-item-name'>İyi Fiyat</span>
+                    <p className='why-us-item-desc'>
+                      Önceliğimiz her zaman sensin. Çalıştığımız tüm şirketlerde bütçeni düşünerek “en iyi fiyat garantisi” sunuyoruz.
+                    </p>
+                  </div>
+
+                  <div className='why-us-item'>
+                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/policy-with-you.svg' alt='7/24 Hizmet' width={90} height={90} className='why-us-item-img'/>
+                    <span className='why-us-item-name'>7/24 Hizmet</span>
+                    <p className='why-us-item-desc'>
+                      24 yıllık tecrübemiz ve uzman sigorta danışmanlarımızla 7/24 her ihtiyacında yanındayız. Üstelik hasar anında saniyeler içinde bize ulaşabilirsin.
+                    </p>
+                  </div>
+                </div>
+            </div>
           </Container>
-        </section> */}
+        </section>
         {/* Why-us section end */}
 
         {/* Landing cover section start */}
