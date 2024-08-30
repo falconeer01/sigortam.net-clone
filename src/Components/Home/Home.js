@@ -12,7 +12,8 @@ function Home(props) {
   const sectionRef = useRef(null);
   
   const [isInView, setIsInView] = useState(false);
-  const [scale, setScale] = useState(0.1);
+  const [firstImageScale, setFirstImageScale] = useState(0.1);
+  const [secondImageScale, setSecondImageScale] = useState(0);
 
   useEffect(() => {
     const currentSectionRef = sectionRef.current;
@@ -24,15 +25,27 @@ function Home(props) {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
+    if (currentSectionRef) {
       observer.observe(currentSectionRef);
     }
 
     const handleScroll = () => {
       const scrollTop = window.scrollY;
+
       if (isInView){
-        const newScale = 0 + scrollTop / 1000;
-        setScale(newScale);
+        let newFirstImageScale = 0 + scrollTop / 1500;
+        newFirstImageScale = Math.min(newFirstImageScale, 1);
+
+        if (newFirstImageScale === 1){
+          let newSecondImageScale = (scrollTop - 1500) / 1500;
+          newSecondImageScale = Math.min(Math.max(newSecondImageScale, 0), 1);
+
+          setFirstImageScale(1- newSecondImageScale);
+          setSecondImageScale(newSecondImageScale);
+        }
+        else{
+          setFirstImageScale(newFirstImageScale);
+        }
       }
     };
 
@@ -45,7 +58,7 @@ function Home(props) {
 
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isInView]);
+  }, [isInView, firstImageScale, secondImageScale]);
 
   const [isSeeOthersClicked, setIsSeeOthersClicked] = useState(false);
   const [activeIndex, setActiveIndex] = useState(1);
@@ -60,12 +73,85 @@ function Home(props) {
 
   return (
     <Container fluid className='m-0 p-0'>
-        <SigortamNavbar/>
+        {/* <SigortamNavbar/> */}
 
         {/* Products section start */}
         <section className='products-section'>
-          <Container className='products'>
-            <div className='products-title'>
+          <Container>
+            <div className='products-cover'>
+              <Col className='px-0'>
+                <h1 className='products-heading'>Sigortada Güvenin Adresi</h1>
+                <div className='products-message'>
+                  Doğru Ürün. İyi Fiyat. 7/24 Hizmet.
+                </div>
+                <Row className='product-row'>
+                  <div className='product-card col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4'>
+                    <a href='#' className='product-card-item'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/branchs/category/auto-v2.svg' width={110} height={90} alt='Kasko Sigortası Branş Sayfası'/>
+                      <span>Kasko</span>
+                    </a>
+                  </div>
+
+                  <div className='product-card col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4'>
+                    <a href='#' className='product-card-item'>
+                      <div className='discount'>%10 İndirim</div>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/branchs/category/electric-vehicle-orange.svg' width={110} height={90} alt='Elektrikli Araç Kaskosu'/>
+                      <span>Elektrikli Araç Kaskosu</span>
+                    </a>
+                  </div>
+
+                  <div className='product-card col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4'>
+                    <a href='#' className='product-card-item'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/branchs/category/complementhealth-v2.svg' width={110} height={90} alt='Tamamlayıcı Sağlık'/>
+                      <span>Tamamlayıcı Sağlık</span>
+                    </a>
+                  </div>
+
+                  <div className='product-card-sm col-6'>
+                    <a href='#' className='product-card-item'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/branchs/category/traffic-orange.svg' width={110} height={90} alt='Trafik Sigortası'/>
+                      <span>Trafik Sigortası</span>
+                    </a>
+                  </div>
+
+                  <div className='product-card-sm col-6'>
+                    <a href='#' className='product-card-item'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/branchs/category/imm.svg' width={110} height={90} alt='İMM'/>
+                      <span>İMM</span>
+                    </a>
+                  </div>
+
+                  <div className='product-card-sm d-none d-md-block d-lg-block col-6'>
+                    <a href='#' className='product-card-item'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/branchs/category/healthOrange.svg' width={110} height={90} alt='Özel Sağlık'/>
+                      <span>Özel Sağlık</span>
+                    </a>
+                  </div>
+                  
+                  <div className='product-card-sm col-6'>
+                    <a href='#' className='product-card-item'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/branchs/category/travel.svg' width={110} height={90} alt='Seyahat Sağlık'/>
+                      <span>Seyahat Sağlık</span>
+                    </a>
+                  </div>
+
+                  <div className='product-card-sm col-6'>
+                    <a href='#' className='product-card-item'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/branchs/category/dask-v2.svg' width={110} height={90} alt='DASK'/>
+                      <span>DASK</span>
+                    </a>
+                  </div>
+
+                  <div className='product-card-sm d-block d-md-none col-6'>
+                    <a href='#' className='product-card-item'>
+                      <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/branchs/category/home.svg' width={110} height={90} alt='Evim Güvende'/>
+                      <span>Evim Güvende</span>
+                    </a>
+                  </div>
+                </Row>
+              </Col>
+            </div>
+            {/* <div className='products-title'>
               <Row className='products-row'>
                 <h1 className='products-heading'>Sigortada Güvenin Adresi</h1>
                 <p className='products-message'>Doğru Ürün. İyi Fiyat. 7/24 Hizmet.</p>
@@ -130,14 +216,14 @@ function Home(props) {
               <Row className='btn-all-products'>
                 <span className='all-products'>Tüm Ürünleri Gör</span>
               </Row>
-            </div>
+            </div> */}
             
           </Container>
         </section>
         {/* Products section end */}
 
         {/* Why-us section start */}
-        <section className='why-us-section'>
+        {/* <section className='why-us-section'>
           <Container fluid className='why-us'>
             <Row className='why-us-items md-3'>
               <h2 className='why-us-title'>Poliçemi neden Sigortam.net'ten almalıyım?</h2>
@@ -164,11 +250,11 @@ function Home(props) {
               </Col>
             </Row>
           </Container>
-        </section>
+        </section> */}
         {/* Why-us section end */}
 
         {/* Landing cover section start */}
-        <section ref={sectionRef} className='landing-cover-section' style={{ backgroundColor: isInView ? 'green' : 'red' }}>
+        {/* <section ref={sectionRef} className='landing-cover-section'>
           <Container className='landing-cover position-relative d-flex align-items-center '>
             <Row className='landing-cover-row'>
               <Col sm='12' lg='5' className='left-landing-cover'>
@@ -197,7 +283,7 @@ function Home(props) {
                   <div className='landing-cover-item-btn'>
                     Hemen Teklif Al
                     <svg width="18" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-1">
-                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       </path>
                     </svg>
                   </div>
@@ -207,14 +293,13 @@ function Home(props) {
               <Col sm='12' lg='7' className='right-landing-cover d-none d-lg-block text-align-center'>
                 <div className='right-landing-cover-container'>
                   <div className='right-landing-cover-first-img'>
-                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature1.svg' alt='en iyi sigorta teklifi' style={
-                      { transform: `scale3d(${scale}, ${scale}, 1)` }}/>
+                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature1.svg' alt='en iyi sigorta teklifi' style={{ transform: `scale3d(${firstImageScale}, ${firstImageScale}, 1)` }}/>
                   </div>
                   <div className='right-landing-cover-second-img'>
-                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature2.svg' alt='en iyi sigorta teklifi'/>
+                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/feature2.svg' alt='en iyi sigorta teklifi' style={{ transform: `scale3d(${secondImageScale}, ${secondImageScale}, 1)` }}/>
                   </div>
                   <div className='mock-up'>
-                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/phone-mockup.jpg' alt='en iyi sigorta teklifi' width={260} height={528}/>
+                    <img src='https://cdnsnet.mncdn.com/facelift/assets/img/elements/phone-mockup.jpg' alt='en iyi sigorta teklifi'  width={260} height={528}/>
                     <span className='d-none d-lg-block'>
                       Görseldeki fiyatlar temsilidir. Aracına özel fiyatları tekliflerde görebilirsin.
                     </span>
@@ -223,11 +308,11 @@ function Home(props) {
               </Col>
             </Row>
           </Container>
-        </section>
+        </section> */}
         {/* Landing cover section end */}
 
         {/* Customer-special section start */}
-        <section className='customer-special-section'>
+        {/* <section className='customer-special-section'>
           <Container className='customer-special'>
             <div className='inner-customer-special'>
               <h2>Sigortam.net'te sana özel neler var?</h2>
@@ -287,11 +372,11 @@ function Home(props) {
               </div>
             </div>
           </Container>
-        </section>
+        </section> */}
         {/* Customer-special section end */}
 
         {/* Comments section start */}
-        <section className='comments-section'>
+        {/* <section className='comments-section'>
           <Container className='comments'>
             <h2>10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h2>
               <Row className='comments-row'>
@@ -312,11 +397,11 @@ function Home(props) {
                 </Col>
               </Row>
           </Container>
-        </section>
+        </section> */}
         {/* Comments section end */}
 
         {/* Awards section start */}
-        <section className='awards-section'>
+        {/* <section className='awards-section'>
           <Container className='awards-container'>
             <Row className='awards-row'>
               <Col className='awards-detail text-left align-self-center' sm='12' md='6' style={{ cursor: 'pointer', textAlign: 'left' }}>
@@ -342,11 +427,11 @@ function Home(props) {
               </Col>
             </Row>
           </Container>
-        </section>
+        </section> */}
         {/* Awards section end */}
 
         {/* Offer section start */}
-        <section className='offers-section'>
+        {/* <section className='offers-section'>
           <Container className='offers'>
             <h2>20'den fazla sigorta şirketinden teklif al</h2>
             <div className='companies'>
@@ -449,11 +534,11 @@ function Home(props) {
               </span>
             </div>
           </Container>
-        </section>
+        </section> */}
         {/* Offer section end */}
 
         {/* Question section start */}
-        <section className='faq-section'>
+        {/* <section className='faq-section'>
           <Container className='faq'>
             <h2 className='faq-title'>Sigortam.net Hakkında En Merak Edilen 5 Soru</h2>
             <div className='faq-accordion'>
@@ -491,11 +576,11 @@ function Home(props) {
               </UncontrolledAccordion>
             </div>
           </Container>
-        </section>
+        </section> */}
         {/* Question section end */}
 
         {/* Trust section start */}
-        <section className='trust-section'>
+        {/* <section className='trust-section'>
           <Container className='trust'>
             <div className='trust-banner'>
               <h3>Sigortada Güvenin Adresi</h3>
@@ -612,10 +697,10 @@ function Home(props) {
               </div>
             </div>
           </Container>
-        </section>
+        </section> */}
         {/* Trust section end */}
 
-        <Footer/>
+        {/* <Footer/> */}
     </Container>
   )
 }

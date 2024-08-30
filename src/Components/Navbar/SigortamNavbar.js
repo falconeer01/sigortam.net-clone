@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SigortamNavbar.css';
+import {
+    UncontrolledAccordion, AccordionItem, AccordionHeader, AccordionBody
+} from 'reactstrap';
 
 function SigortamNavbar() {
-  const [isHovered, setIsHovered] = useState(false);
+  const loginBtn = useRef(null);
+  const [loginBtnText, setLoginBtnText] = useState('Giriş Yap / Üye Ol');
+
   const [isSticky, setIsSticky] = useState(false);
   
   useEffect(() => {
     const handleScroll = () => {
         const nav = document.querySelector('.nav');
-
-        console.log(nav.clientHeight);
 
         if (window.scrollY > nav.clientHeight){
             setIsSticky(true);
@@ -20,14 +23,31 @@ function SigortamNavbar() {
         }
     }
 
+    const updateLoginBtnText = () => {
+        if (window.innerWidth < 992){
+            setLoginBtnText('Giriş Yap');
+        }
+        else{
+            setLoginBtnText('Giriş Yap / Üye Ol');
+        }
+    };
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', updateLoginBtnText);
+    updateLoginBtnText();
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', updateLoginBtnText);
     };
   }, []);
 
   return (
     <div className={isSticky ? 'nav sticky' : 'nav'}>
+        <div className='collapse-nav position-relative'>
+            <button className='collapse-nav-login-btn'>Giriş Yap / Üye Ol</button>
+        </div>
+
         <div className='navbar-brand'>
             <a href='#'>
                 <img src='https://cdnsnet.mncdn.com/facelift/assets/img/core/logo/app-logo-goat.svg' width={26} height={27} className='goat-icon'></img>
@@ -38,8 +58,6 @@ function SigortamNavbar() {
         <div className='nav-link-list h-100 d-flex justify-content-center align-items-center'>
             <ul className='nav-links d-flex p-0'>
                 <li className='products p-0'
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
                 >
                     {/* Products modal */}
                     <div className='products-modal'>
@@ -148,7 +166,6 @@ function SigortamNavbar() {
                     <a href='#' className='nav-link'>
                         Ürünlerimiz <span className='dropdown-logo'>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                            // className={isHovered ? 'rotated-svg' : ''}
                             ></path></svg>
                         </span>
                     </a>
@@ -227,9 +244,16 @@ function SigortamNavbar() {
             </div>
 
             <div className='login d-flex align-items-center'>
-                <button className='login-btn'>
-                    Giriş Yap / Üye Ol
-                </button>
+                <button className='login-btn' ref={loginBtn}>{loginBtnText}</button>
+            </div>
+        </div>
+
+        <div className='nav-burger-menu'>
+            <div className='burger-icon d-flex d-lg-none me-0 '>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="var(--color-icon-01)" class="app-header-open-mobile-menu-button__icon">
+                    <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    </path>
+                </svg>
             </div>
         </div>
     </div>
