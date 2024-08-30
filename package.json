@@ -1,5 +1,6 @@
 {
   "name": "sigortam.net-clone",
+  "homepage": "https://github.com/falconeer01/sigortam.net-clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
