@@ -1,7 +1,7 @@
 {
   "name": "sigortam.net-clone",
   "version": "0.1.0",
-  "homepage": "https://github.com/falconeer01/sigortam.net-clone",
+  "homepage": "https://falconeer01.github.io/sigortam.net-clone",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
