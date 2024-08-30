@@ -418,28 +418,30 @@ function Home(props) {
         {/* Customer-special section end */}
 
         {/* Comments section start */}
-        {/* <section className='comments-section'>
+        <section className='comments-section'>
           <Container className='comments'>
-            <h2>10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h2>
-              <Row className='comments-row'>
-                <Col lg="4" className='comment-card'>
+            <div className='comments-row'>
+              <h2>10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h2>
+              <div className='comments-list'>
+                <div className='comment-card col-11 col-md-4'>
                   <span className='comment'>İnternetten alınan bir poliçeden <b>çok daha fazlası.</b> Kaza anında çekicinin gelmesinden tutun sağlık durumunuza kadar <b>her şeyle ilgileniyorlar.</b>
                   </span>
                   <span className='commenter'>Kasım Ş.</span>
-                </Col>
-                <Col lg="4" className='comment-card'>
+                </div>
+                <div className='comment-card col-11 col-md-4'>
                   <span className='comment'>Sigortam.net sayesinde evden çıkmadan <b>tek bir telefonla</b> trafik sigortası ve kaskoyu yaptırdım.<b> Hızlı, sorunsuz ve güvenilir.</b>
                   </span>
                   <span className='commenter'>Murat İ.</span>
-                </Col>
-                <Col lg="4" className='comment-card'>
+                </div>
+                <div className='comment-card col-11 col-md-4'>
                   <span className='comment'>Piyasadan alabileceğim kasko poliçesini aynı kapsamda <b>taksitle, daha ucuza ve profesyonel hizmetle </b>Sigortam.net üzerinden satın aldım.
                   </span>
                   <span className='commenter'>Şaban K.</span>
-                </Col>
-              </Row>
+                </div>
+              </div>
+            </div>
           </Container>
-        </section> */}
+        </section>
         {/* Comments section end */}
 
         {/* Awards section start */}

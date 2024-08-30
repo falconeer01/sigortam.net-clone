@@ -495,7 +495,6 @@ a:hover{
 }
 
 .comments-section{
-    margin: 72px 0;
     padding: 72px 0;
 }
 
@@ -507,13 +506,23 @@ a:hover{
 }
 
 .comments-row{
-    display: flex;
-    justify-content: center;
-    margin: 50px;
+    position: relative;
+}
+
+.comments-row h2{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .comments-row div:not(:last-child){
     margin-right: 20px;
+}
+
+.comments-list{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
 }
 
 .comment-card{
@@ -801,6 +810,11 @@ a:hover{
         font-size: 15px;
         line-height: 24px;
     }
+
+    .comments-section{
+        margin-top: 72px;
+        margin-bottom: 72px;
+    }
 }
 
 /* max-width: 992px */
@@ -853,6 +867,30 @@ a:hover{
 
     .carousel-indicator-cover{
         margin-top: 20px;
+    }
+
+    .comments-list{
+        justify-content: unset;
+        height: 100%;
+        margin: 18px 0 35px 14px;
+        overflow-y: hidden;
+    }
+
+    .comments-row div:not(:last-child){
+        margin-right: 20px;
+    }
+
+    .comment-card{
+        display: inline-flex;
+        width: 100vw;
+        height: 195px;
+        max-height: 100vh;
+        padding: 28px;
+    }
+
+    .comment, .commenter{
+        font-size: 15px;
+        line-height: 24px;
     }
 }
 
