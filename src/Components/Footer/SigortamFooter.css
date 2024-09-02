@@ -382,6 +382,16 @@ footer{
     .footer-nav-title svg{
         display: block;
     }
+
+    .bottom-inner-footer{
+        height: 100%;
+    }
+
+    .bottom-footer-banner{
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
 
 /* max-width: 768px */
@@ -407,7 +417,7 @@ footer{
 /* max-width: 1200px */
 @media (max-width: 1200px){
     .bottom-footer{
-        height: 135px;
+        height: 196px;
         padding-top: 32px;
         padding-bottom: 32px;
     }
